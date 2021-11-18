@@ -1,8 +1,31 @@
 import { Button, Form, Message } from 'semantic-ui-react'
+import { useState } from 'react';
 
-const Contact = () => {
+const Contact = ({addComments}) => {
 
+    const [name, setName] = useState("");
+    const [comment, setComment] = useState("")
     
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const newData = 
+        {
+            name : name,
+            comment : comment,
+        }
+        fetch(`${process.env.REACT_APP_API_URL}/contact`, {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body : JSON.stringify(newData)
+        })
+        .then((r) => r.json())
+        .then((newItem) => addComments(newItem))
+        e.target.reset();
+        alert("Thank you for your comments! I will reach out :)")
+    }
+
     return (
     
         <>
@@ -12,7 +35,7 @@ const Contact = () => {
             floating
         />
         
-        <Form style={{marginLeft:"33%", justifyItems: "center"}}>
+        <Form style={{marginLeft:"33%", justifyItems: "center"}} onSubmit={handleSubmit}>
             <Form.Field 
                 style={{
                     textAlign : "center",
@@ -20,12 +43,12 @@ const Contact = () => {
                 }}
         >
           <label style={{fontSize: "20px", padding: "3%", color: "white"}}>Your Name</label>
-          <input placeholder='First and Last Name' required style={{textAlign : "center"}}/>
+          <input placeholder='First and Last Name' required style={{textAlign : "center"}} onChange={(e) => setName(e.target.value)}/>
        
 
       
           <label style={{fontSize: "20px", paddingTop: "10%", paddingBottom: "5%", color: "white"}}>Message</label>
-          <textarea type="text" placeholder='ex: Hello, here are some ideas...' required style={{textAlign : "center"}}/>
+          <textarea type="text" placeholder='ex: Hello, here are some ideas...' required style={{textAlign : "center"}} onChange={(e) => setComment(e.target.value)}/>
         </Form.Field>
         
         <div style={{marginLeft:"18%"}}>

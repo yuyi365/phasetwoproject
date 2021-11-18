@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
         name : foodName,
         image : foodImage,
     }
-    fetch('https://phase-2-backend.herokuapp.com/eats', {
+    fetch(`${process.env.REACT_APP_API_URL}/eats`, {
         method: "POST",
         headers: {
             "Content-Type" : "application/json"
