@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Container, Divider, Button } from 'semantic-ui-react'
+import { Container, Grid, Divider, Button } from 'semantic-ui-react'
 
 const NavBar = () => {
 
@@ -11,7 +11,7 @@ const NavBar = () => {
 
     return (
         <div>
-      <Container textAlign='center' style={{zIndex:1}}>
+      <Grid textAlign='center' stackable>
 
         <Button className="navButton" style={buttonStyle} as={Link} to="/">
             Home
@@ -25,7 +25,8 @@ const NavBar = () => {
             Contact
         </Button>
 
-      </Container>
+      </Grid>
+      
       <Divider />
     </div>
     )

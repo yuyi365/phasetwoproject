@@ -18,14 +18,15 @@ body {
 
 .ui.button.navButton {
     display: inline-block;
-    width: 20% !important;
-    height: 50px !important;
+    width: 2.5em;
+    height: 2em;
     color: #23252f;
-    padding: 20px 40px;
     border-radius: 9px;
     background: #64ed85;
     box-shadow: 2px 2px 3px #296137, -2px -2px 3px #9fffd3;
     transition: all .3s;
+    font-size: 1.5vw;
+    padding: 0.5em 0em 0.5em;
 }
 
 .ui.button.navButton:hover {
@@ -49,9 +50,9 @@ body {
 
 .ui.button#matchButton {
     display: inline-block;
-    width: 50% !important;
-    height: 80px !important;
-    padding: 5% 10%;
+    width: 6em;
+    height: 4em;
+    padding: 1em 0em 1em;
     color: #23252f;
     border-radius: 9px;
     background: #64ed85;
@@ -60,17 +61,17 @@ body {
 }
 
 .ui.button#matchButton:hover {
-    width: 50% !important;
-    height: 80px !important;
-    padding: 5% 10%;
+    width: 6em;
+    height: 4em;
+    padding: 1em 0em 1em;
     transition-duration: 0.9s;
     background: #64ed85;
 }
 
 .ui.button#matchButton:active {
-    width: 50% !important;
-    height: 80px !important;
-    padding: 5% 10%;
+    width: 6em;
+    height: 4em;
+    padding: 1em 0em 1em;
     border-radius: 25px;
     border-radius: 5px;
     background-color: #64ed85 !important;
@@ -78,9 +79,9 @@ body {
 }
 
 .ui.button#matchButton.active {
-    width: 50% !important;
-    height: 80px !important;
-    padding: 5% 10%;
+    width: 6em;
+    height: 4em;
+    padding: 1em 0em 1em;
     border-radius: 25px;
     border-radius: 5px;
     background-color: #64ed85 !important;
@@ -89,28 +90,29 @@ body {
 
 .ui.button#tryAgain {
     display: inline-block;
-    width: 60% !important;
-    height: 80px !important;
+    width: 6em;
+    height: 4em;
     color: #23252f;
-    padding: 5% 10%;
+    padding: 1em 0em 1em;
     border-radius: 9px;
     background: #64ed85;
     box-shadow: 2px 2px 3px #296137, -2px -2px 3px #9fffd3;
     transition: all .3s;
+    font-size: 2vw;
 }
 
 .ui.button#tryAgain:hover {
-    width: 60% !important;
-    height: 80px !important;
-    padding: 5% 10%;
+    width: 6em;
+    height: 4em;
+    padding: 1em 0em 1em;
     transition-duration: 0.9s;
     background: #64ed85;
 }
 
 .ui.button#tryAgain:active {
-    width: 60% !important;
-    height: 80px !important;
-    padding: 5% 10%;
+    width: 6em;
+    height: 4em;
+    padding: 1em 0em 1em;
     border-radius: 25px;
     border-radius: 5px;
     background-color: #64ed85 !important;
@@ -118,9 +120,9 @@ body {
 }
 
 .ui.button#tryAgain.active {
-    width: 60% !important;
-    height: 80px !important;
-    padding: 5% 10%;
+    width: 6em;
+    height: 4em;
+    padding: 1em 0em 1em;
     border-radius: 25px;
     border-radius: 5px;
     background-color: #64ed85 !important;

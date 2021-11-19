@@ -12,7 +12,7 @@ const Tiles = ({currentNameOne, currentImageOne, currentDescriptionOne, currentN
 
     return (
 
-      <Grid container columns={3}>
+      <Grid container columns={3} stackable>
 
         <Grid.Column style={styleSet}>
         <TileContent

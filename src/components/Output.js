@@ -31,7 +31,7 @@ const styleSet = {
     
 return (
 
-  clickedMatch ? <Message style={styleSet}>
+  clickedMatch ? <Message style={styleSet} stackable>
     <h1 style={{color : "darkblue"}}>Your perfect night in awaits...</h1>
     <span style={{color : "darkblue"}}>{`${currentNameOne}`}</span><span> would go well with </span><span style={{color : "darkblue"}}>{`${currentNameTwo}`}</span>
     <br></br><br></br>

@@ -11,7 +11,7 @@ const HeaderFile = () => {
     const headerTitle = {
         color : "white",
         fontFamily: "Audiowide",
-        fontSize: "40px"
+        fontSize: "3.5vw"
     }
 
     return (
