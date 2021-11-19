@@ -54,7 +54,7 @@ const Contact = () => {
           <label style={{fontSize: "20px", padding: "3%", color: "white"}}>Your Name</label>
           <input placeholder='First and Last Name' required style={{textAlign : "center"}} onChange={(e) => setName(e.target.value)}/>
        
-          <label style={{fontSize: "20px", padding: "3%", color: "white"}}>Your Email</label>
+          <label style={{fontSize: "20px", paddingTop: "10%", paddingBottom: "5%", color: "white"}}>Your Email</label>
           <input placeholder='hello@gmail.com' required style={{textAlign : "center"}} onChange={(e) => setEmail(e.target.value)}/>
       
           <label style={{fontSize: "20px", paddingTop: "10%", paddingBottom: "5%", color: "white"}}>Message</label>
