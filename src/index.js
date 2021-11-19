@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App'
 import 'semantic-ui-css/semantic.min.css'
 import { DataProvider } from './context/data';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom' // important!!
 
 ReactDOM.render(
     <Router>

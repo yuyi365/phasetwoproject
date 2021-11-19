@@ -1,10 +1,18 @@
 import { Button, Form, Message } from 'semantic-ui-react'
 import { useState } from 'react';
 
-const Contact = ({addComments}) => {
+const Contact = () => {
 
     const [name, setName] = useState("");
-    const [comment, setComment] = useState("")
+    const [email, setEmail] = useState("");
+    const [comment, setComment] = useState("");
+
+    const addComments = (newComment) => {
+        setComment([
+          ...comment,
+          newComment
+        ])
+      }
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -12,6 +20,7 @@ const Contact = ({addComments}) => {
         {
             name : name,
             comment : comment,
+            email : email,
         }
         fetch(`${process.env.REACT_APP_API_URL}/contact`, {
             method: "POST",
@@ -45,7 +54,8 @@ const Contact = ({addComments}) => {
           <label style={{fontSize: "20px", padding: "3%", color: "white"}}>Your Name</label>
           <input placeholder='First and Last Name' required style={{textAlign : "center"}} onChange={(e) => setName(e.target.value)}/>
        
-
+          <label style={{fontSize: "20px", padding: "3%", color: "white"}}>Your Email</label>
+          <input placeholder='hello@gmail.com' required style={{textAlign : "center"}} onChange={(e) => setEmail(e.target.value)}/>
       
           <label style={{fontSize: "20px", paddingTop: "10%", paddingBottom: "5%", color: "white"}}>Message</label>
           <textarea type="text" placeholder='ex: Hello, here are some ideas...' required style={{textAlign : "center"}} onChange={(e) => setComment(e.target.value)}/>

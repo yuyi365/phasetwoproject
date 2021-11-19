@@ -19,8 +19,6 @@ const App = () => {
 
   const {setCocktail, setGame, setMovie, setBeer, food, setFood} = useContext(DataContext)
 
-  const [comment, setComment] = useState([]);
-
   useEffect(() => {
       fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
       .then((r) => r.json())
@@ -57,13 +55,6 @@ const App = () => {
     ])
   }
 
-  const addComments = (newComment) => {
-    setComment([
-      ...comment,
-      newComment
-    ])
-  }
-
   return (
     <>
     <Particles className="particles" options={particlesOptions}/>
@@ -78,9 +69,7 @@ const App = () => {
           />
         </Route>
         <Route exact path="/contact">
-          <Contact 
-            addComments={addComments}
-          />
+          <Contact />
         </Route>
         <Route exact path="/">
           <ContentContainter />
